@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="orderstyle.css" type="text/css">
+    <script type="text/javascript" src="scriptng.js"></script>
+</head>
+<body onkeyup="disableOrder();" onkeydown="disableOrder();" onkeypress="disableOrder();" onmouseout="disableOrder();"
+      onload="disableOrder();" onmousedown="disableOrder();" onmouseup="disableOrder();">
+<form action="#" name="form" onsubmit="onProcessing(); return false">
+
+    <div id="image">
+
+    </div>
+
+
+    <div id="form">
+
+        <h id="header"> Ice Cream Order</h><br>
+
+
+
+        Flavor <select id="flavor" name="flavor" required  oninvalid="this.setCustomValidity('Please Make a choice')"
+                       oninput="setCustomValidity('')">
+
+        <option value="" disabled selected hidden>select an flavor</option>
+        <option  value="chocolate">Chocolate</option>
+        <option  value="mintchocolatechip">MintChocolateChip</option>
+        <option  value="strawberry">Strawberry</option>
+        <option  value="vanilla">Vanilla</option>
+    </select>
+
+
+
+
+       <div id="sizestyle">
+           <h1 id="siz">size </h1>
+
+            <input type="radio" name="sizes" value="small" required>Small<br>
+            <input type="radio" name="sizes" id="medium" value="medium" required>Medium<br>
+            <input type="radio" name="sizes" value="large" required>Large
+       </div>
+
+        Quantity (1-10)<input type="number" id="quantity" min="1" max="10" required>
+        <br>
+        <div id="extrastyle" >
+            <h1 id="top">Extra Topping</h1>
+            <input type="checkbox" name="extras" value="salted" id="check">Salted Caramel<br>
+            <input type="checkbox" name="extras" value="sugarfree">Sugar Free Strawberry<br>
+
+        </div><br>
+        <div id="orderDiv">
+            <input type="submit" id="order" value="order">
+
+        </div>
+        <div id="pricecal"></div>
+        <div id="timecal"></div>
+        <div id="estimate"></div>
+    </div>
+</form>
+</body>
+</html>
